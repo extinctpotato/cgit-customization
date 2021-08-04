@@ -1,15 +1,92 @@
+/* This is an edited version of the original by zx2c4 at <git.zx2c4.com/cgit> */
+
+/* GPLv2 applies: <https://www.gnu.org/licenses/gpl-2.0.html> */
+
+/* Highlight */
+
+/*Includes*/
+.hl.ppc {
+	color: #5ed4fc;
+}
+
+.hl.pps {
+	color: #d3869b
+}
+
+/*Comments*/
+.hl.slc, .hl.com {
+	color: #8cbe7b
+}
+
+/*type*/
+.hl.kwb {
+	color: #87ffaf
+}
+
+/*String & Numbers*/
+.hl.sng, .hl.num {
+	color: #d08599
+}
+
+/*Format string*/
+.hl.esc, .hl.ipl {
+	color: #ffd7d7
+}
+
+/*If/loops/return*/
+.hl.kwa {
+	color: #fabd2f;
+}
+
+/*brackets/equals/...*/
+.hl.opt {
+	color: #d7d7ff
+}
+
+
+
+/* End of highlight */
+
+code {
+	-moz-tab-size: 3;
+	tab-size: 3;
+}
+
+
+/* Dark mode table color */
+
+td, th {
+	color: #ccc
+}
+
+/* Dark mode text and sel boxes */
+
+input, select {
+	background-color: #111;
+	color: #ccc;
+	border-color: #222;
+}
+
+/* Dark mode deco badeges (eg [HEAD] [master]) */
+a.deco, a.branch-deco {
+	color: #333 !important;
+}
+
+body {
+	background: #222;
+}
+
 div#cgit {
 	padding: 0em;
 	margin: 0em;
 	font-family: sans-serif;
 	font-size: 10pt;
-	color: #333;
-	background: white;
+	color: #ccc;
 	padding: 4px;
 }
 
 div#cgit a {
-	color: blue;
+	color: #aaf;
 	text-decoration: none;
 }
 
@@ -38,7 +115,7 @@ div#cgit table#header td.main {
 }
 
 div#cgit table#header td.main a {
-	color: #000;
+	color: #ddd;
 }
 
 div#cgit table#header td.form {
@@ -56,13 +133,13 @@ div#cgit table#header td.form select {
 }
 
 div#cgit table#header td.sub {
-	color: #777;
-	border-top: solid 1px #ccc;
+	color: #ccc;
+	border-top: solid 1px #111;
 	padding-left: 10px;
 }
 
 div#cgit table.tabs {
-	border-bottom: solid 3px #ccc;
+	border-bottom: solid 3px #111;
 	border-collapse: collapse;
 	margin-top: 2em;
 	margin-bottom: 0px;
@@ -76,13 +153,13 @@ div#cgit table.tabs td {
 
 div#cgit table.tabs td a {
 	padding: 2px 0.75em;
-	color: #777;
+	color: #aaa;
 	font-size: 110%;
 }
 
 div#cgit table.tabs td a.active {
-	color: #000;
-	background-color: #ccc;
+	color: #ddd;
+	background-color: #111;
 }
 
 div#cgit table.tabs a[href^="http://"]:after, div#cgit table.tabs a[href^="https://"]:after {
@@ -109,14 +186,12 @@ div#cgit table.tabs td.form select {
 div#cgit div.path {
 	margin: 0px;
 	padding: 5px 2em 2px 2em;
-	color: #000;
-	background-color: #eee;
 }
 
 div#cgit div.content {
 	margin: 0px;
 	padding: 2em;
-	border-bottom: solid 3px #ccc;
+	border-bottom: solid 3px #111;
 }
 
 
@@ -135,31 +210,31 @@ div#cgit table.list tr.logheader {
 }
 
 div#cgit table.list tr:nth-child(even) {
-	background: #f7f7f7;
+	background: #333;
 }
 
 div#cgit table.list tr:nth-child(odd) {
-	background: white;
+	background: #222;
 }
 
 div#cgit table.list tr:hover {
-	background: #eee;
+	background: #111;
 }
 
 div#cgit table.list tr.nohover {
-	background: white;
+	background: #222;
 }
 
 div#cgit table.list tr.nohover:hover {
-	background: white;
+	background: #222;
 }
 
 div#cgit table.list tr.nohover-highlight:hover:nth-child(even) {
-	background: #f7f7f7;
+	background: #111;
 }
 
 div#cgit table.list tr.nohover-highlight:hover:nth-child(odd) {
-	background: white;
+	background: #222;
 }
 
 div#cgit table.list th {
@@ -218,16 +293,16 @@ div#cgit table.list td.logmsg {
 }
 
 div#cgit table.list td a {
-	color: black;
+	color: #aaa;
 }
 
 div#cgit table.list td a.ls-dir {
 	font-weight: bold;
-	color: #00f;
+	color: #aaf;
 }
 
 div#cgit table.list td a:hover {
-	color: #00f;
+	color: #aaf;
 }
 
 div#cgit img {
@@ -304,7 +379,7 @@ div#cgit table.blob td.hashes,
 div#cgit table.blob td.lines {
 	margin: 0; padding: 0 0 0 0.5em;
 	vertical-align: top;
-	color: black;
+	color: #ccc;
 }
 
 div#cgit table.blob td.linenumbers {
@@ -320,7 +395,7 @@ div#cgit table.blob pre {
 
 div#cgit table.blob td.linenumbers a,
 div#cgit table.ssdiff td.lineno a {
-	color: gray;
+	color: #ccc;
 	text-align: right;
 	text-decoration: none;
 }
@@ -396,10 +471,10 @@ div#cgit div.cgit-panel {
 	margin-top: 1.5em;
 }
 
-div#cgit div.cgit-panel table {
+div#cgit div.cgit-panel table, table.diffstat {
 	border-collapse: collapse;
 	border: solid 1px #aaa;
-	background-color: #eee;
+	background-color: #111;
 }
 
 div#cgit div.cgit-panel th {
@@ -468,7 +543,6 @@ div#cgit div.diffstat-header {
 div#cgit table.diffstat {
 	border-collapse: collapse;
 	border: solid 1px #aaa;
-	background-color: #eee;
 }
 
 div#cgit table.diffstat th {
@@ -495,15 +569,15 @@ div#cgit table.diffstat td span.modechange {
 }
 
 div#cgit table.diffstat td.add a {
-	color: green;
+	color: #5c5;
 }
 
 div#cgit table.diffstat td.del a {
-	color: red;
+	color: #c55;
 }
 
 div#cgit table.diffstat td.upd a {
-	color: blue;
+	color: #aaf;
 }
 
 div#cgit table.diffstat td.graph {
@@ -546,28 +620,29 @@ div#cgit table.diff td {
 div#cgit table.diff td div.head {
 	font-weight: bold;
 	margin-top: 1em;
-	color: black;
+	color: #bbb;
 }
 
 div#cgit table.diff td div.hunk {
-	color: #009;
+	color: #88f;
 }
 
 div#cgit table.diff td div.add {
-	color: green;
+	color: #8f8;
 }
 
 div#cgit table.diff td div.del {
-	color: red;
+	color: #f88;
 }
 
-div#cgit .sha1 {
+div#cgit .oid {
 	font-family: monospace;
 	font-size: 90%;
 }
 
 div#cgit .left {
 	text-align: left;
+	color: #ddd;
 }
 
 div#cgit .right {
@@ -622,35 +697,35 @@ div#cgit ul.pager .current {
 
 div#cgit span.age-mins {
 	font-weight: bold;
-	color: #080;
+	color: #fff;
 }
 
 div#cgit span.age-hours {
-	color: #080;
+	color: #fff;
 }
 
 div#cgit span.age-days {
-	color: #040;
+	color: #eee;
 }
 
 div#cgit span.age-weeks {
-	color: #444;
+	color: #ccc;
 }
 
 div#cgit span.age-months {
-	color: #888;
-}
-
-div#cgit span.age-years {
 	color: #bbb;
 }
 
+div#cgit span.age-years {
+	color: #aaa;
+}
+
 div#cgit span.insertions {
-	color: #080;
+	color: #8f8;
 }
 
 div#cgit span.deletions {
-	color: #800;
+	color: #f88;
 }
 
 div#cgit div.footer {
@@ -809,62 +884,62 @@ div#cgit table.ssdiff td {
 }
 
 div#cgit table.ssdiff td.add {
-	color: black;
-	background: #cfc;
+	color: #ccc;
+	background: #141;
 	min-width: 50%;
 }
 
 div#cgit table.ssdiff td.add_dark {
-	color: black;
-	background: #aca;
+	color: #ccc;
+	background: #113611;
 	min-width: 50%;
 }
 
 div#cgit table.ssdiff span.add {
-	background: #cfc;
+	background: #141;
 	font-weight: bold;
 }
 
 div#cgit table.ssdiff td.del {
-	color: black;
-	background: #fcc;
+	color: #ccc;
+	background: #311;
 	min-width: 50%;
 }
 
 div#cgit table.ssdiff td.del_dark {
-	color: black;
-	background: #caa;
+	color: #ccc;
+	background: #261111;
 	min-width: 50%;
 }
 
 div#cgit table.ssdiff span.del {
-	background: #fcc;
+	background: #311;
 	font-weight: bold;
 }
 
 div#cgit table.ssdiff td.changed {
-	color: black;
-	background: #ffc;
+	color: #fff;
+	background: #331;
 	min-width: 50%;
 }
 
 div#cgit table.ssdiff td.changed_dark {
-	color: black;
-	background: #cca;
+	color: #ccc;
+	background: #262611;
 	min-width: 50%;
 }
 
 div#cgit table.ssdiff td.lineno {
-	color: black;
-	background: #eee;
+	color: #ccc;
+	background: #112;
 	text-align: right;
 	width: 3em;
 	min-width: 3em;
 }
 
 div#cgit table.ssdiff td.hunk {
-	color: black;
-	background: #ccf;
+	color: #aaf;
+	background: #111;
 	border-top: solid 1px #aaa;
 	border-bottom: solid 1px #aaa;
 }
@@ -876,7 +951,6 @@ div#cgit table.ssdiff td.head {
 
 div#cgit table.ssdiff td.head div.head {
 	font-weight: bold;
-	color: black;
 }
 
 div#cgit table.ssdiff td.foot {
@@ -893,20 +967,3 @@ div#cgit table.ssdiff td.space {
 div#cgit table.ssdiff td.space div {
 	min-height: 3em;
 }
-
-/* Style definition file generated by highlight 3.9, http://www.andre-simon.de/ */
-/* Highlighting theme: Kwrite Editor */
-/* adapted for cgit */
-div#cgit table.blob .num { color:#b07e00; }
-div#cgit table.blob .esc { color:#ff00ff; }
-div#cgit table.blob .str { color:#bf0303; }
-div#cgit table.blob .pps { color:#818100; }
-div#cgit table.blob .slc { color:#838183; font-style:italic; }
-div#cgit table.blob .com { color:#838183; font-style:italic; }
-div#cgit table.blob .ppc { color:#008200; }
-div#cgit table.blob .opt { color:#000000; }
-div#cgit table.blob .lin { color:#555555; }
-div#cgit table.blob .kwa { color:#000000; font-weight:bold; }
-div#cgit table.blob .kwb { color:#0057ae; }
-div#cgit table.blob .kwc { color:#000000; font-weight:bold; }
-div#cgit table.blob .kwd { color:#010181; }

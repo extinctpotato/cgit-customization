@@ -975,6 +975,13 @@ div#cgit table.ssdiff td.space div {
 	src: url('source_code_pro.woff2') format('woff2');
 }
 
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	src: url('lato.woff2') format('woff2');
+}
+
 pre {
 	font-family: 'Source Code Pro', monospace;
 }
